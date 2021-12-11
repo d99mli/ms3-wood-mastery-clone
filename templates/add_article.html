@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="card bg-light border-0 rounded mt-5 p-5" style="width: 60%;">
+    <div class="card-body">
+      <h1 class="card-title">Write Article</h1>
+      {% from "includes/_formhelpers.html" import render_field %}
+      <form method="POST" action="{{ url_for('add_article') }}" class="card-text">
+          <div class="form-group">
+              {{ render_field(form.title, class_ = 'form-control') }}
+          </div>
+          <div class="form-group">
+            {{ render_field(form.body, class_ = 'form-control', id='editor') }}
+        </div>>
+        <p><input type="submit" value="Publish" class="btn btn-primary"></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="card bg-light border-0 rounded mt-5 p-5" style="width: 60%;">
+    <div class="card-body">
+      <h1 class="card-title">Add Category</h1>
+      {% from "includes/_formhelpers.html" import render_field %}
+      <form method="POST" action="{{ url_for('add_category') }}" class="card-text">
+          <div class="form-group">
+              {{ render_field(form.category, class_ = 'form-control') }}
+          </div>
+        <p><input type="submit" value="Add Category" class="btn btn-primary"></p>
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="content-section">
+    <form method="POST" action="">
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Add Category</legend>
+        <div class="form-group">
+          {{ form.category.label(class="form-control-label") }}
+          {{ form.category(class="form-control form-control-lg") }}
+        </div>
+
+      </fieldset>
+    </form>
+
+  </div>
+{% endblock %}

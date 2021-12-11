@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="card bg-light border-0 rounded mt-5 p-5" style="width: 100%;">
+    <div class="card-body text-center">
+      <h1 class="card-title">Articles</h1>
+      <ul class="list-group list-group-flush">
+        {% for article in articles %}
+            <li class="list-group-item"><a href="/article/{id}">{{article.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

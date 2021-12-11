@@ -1,0 +1,12 @@
+/* Navbar */
+
+
+
+/* Account Page */
+
+.account-img {
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 2rem 0 1rem 0;
+}

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="card bg-light border-0 rounded mt-5 p-5" style="width: 60%;">
+    <div class="card-body">
+      <h1 class="card-title">Edit Category</h1>
+      {% from "includes/_formhelpers.html" import render_field %}
+      <form method="POST" action="{{ url_for('edit_category', category_id=category._id) }}" class="card-text">
+          <div class="form-group">
+              {{ render_field(form.category, class_ = 'form-control') }}
+          </div>
+          <a href="{{ url_for('get_categories') }}" class="btn btn-danger">Cancel</a>
+          <p><input type="submit" value="Update" class="btn btn-primary"></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

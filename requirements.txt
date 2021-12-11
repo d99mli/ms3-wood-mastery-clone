@@ -1,0 +1,10 @@
+click==8.0.3
+dnspython==2.1.0
+Flask==2.0.2
+Flask-PyMongo==2.3.0
+Flask-WTF==1.0.0
+itsdangerous==2.0.1
+passlib==1.7.4
+pymongo==3.12.1
+Werkzeug==2.0.2
+WTForms==3.0.0
